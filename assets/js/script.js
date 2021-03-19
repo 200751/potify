@@ -5,6 +5,7 @@ var repeat = document.getElementById("repeat");
 
 repeat.addEventListener("click", function(){
   audio.setAttribute("loop", "");
+  repeat.style.color = "green";
 });
 
 function menu() {
