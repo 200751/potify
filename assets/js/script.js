@@ -1,8 +1,11 @@
-var song = document.querySelectorAll("tr.song");
 var audio = document.getElementById("audio");
 var title = document.getElementById("title");
 var album_cover = document.getElementById("album_cover");
-var firstValue = 0;
+var repeat = document.getElementById("repeat");
+
+repeat.addEventListener("click", function(){
+  audio.setAttribute("loop", "");
+});
 
 function menu() {
   var menu = document.getElementById("menu");
@@ -53,6 +56,10 @@ document.getElementById("song_playlist").addEventListener("click", function (ite
     audio.volume = 0.1;
 
     // Toggle the highlight
-    if (row.classList.contains("highlight")) row.classList.remove("highlight");
-    else row.classList.add("highlight");
+    // if (row.classList.contains("active")){
+    //     row.classList.remove("active");
+    // } else {
+    //     row.classList.add("active");
+    // }
   });
+

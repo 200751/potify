@@ -116,6 +116,9 @@ button {
   width: 10vw;
   background-color: #353535
 }
+tr.active {
+  color: #2A4B9B;
+}
 
 @media only screen and (max-width: 600px) /* mobile */ {
   figure img {
