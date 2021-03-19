@@ -48,7 +48,7 @@ document.getElementById("song_playlist").addEventListener("click", function (ite
     var lower = song_title.toLowerCase();
 
     title.innerHTML = row_value;
-    album_cover.src = "assets/img/" + lower + ".jpg";
+    album_cover.src = "assets/img/albums/" + lower + ".jpg";
     audio.src = "assets/audio/" + lower + ".mp3";
     audio.volume = 0.1;
 
