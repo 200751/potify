@@ -1,0 +1,178 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: black
+}
+
+main {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+}
+
+.audioplayer {
+  background-color: #181818;
+  color: white;
+  width: 70vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  box-shadow: -3px 0px 10px 1px #181818;
+}
+
+.playlist {
+  background-color: #353535;
+  color: white;
+  width: 30vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.playlist_ul {
+  width: 100%;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  box-shadow: 1px 1px 3px  rgba(0,0,0,0.6);
+}
+
+.playlist_ul li {
+  flex: 10%;
+  text-transform: uppercase;
+  line-height: 10vh;
+  text-align: center;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+table {
+  width: 100%;
+}
+tr{
+  display: flex;
+  border-bottom: solid 1px lightgray;
+}
+td {
+  flex: 33%;
+  line-height: 3vh;
+  text-align: center;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+figure {
+  display: flex;
+  justify-content: center;
+}
+
+figure img {
+  width: 30vw;
+  object-fit: cover;
+}
+
+#title {
+  font-size: 2rem;
+  text-align: center;
+  height: 10vh;
+  line-height: 10vh;
+  border-top: 1vh solid #2A4B9B;
+}
+#album_cover {
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+audio {
+  margin: 0 auto;
+}
+
+.controls {
+  margin: 0 auto;
+}
+
+button {
+  background-color: #181818;
+  border: none;
+  color: #8d8d8d;
+}
+
+#menu {
+  display: none;
+  width: 10vw;
+  height: 100%;
+  border-top: 1vh solid #2A4B9B;
+  background-color: #353535;
+}
+#menu_button {
+  margin-top: 1vh;
+  color: white;
+  width: 10vw;
+  background-color: #353535
+}
+
+@media only screen and (max-width: 600px) /* mobile */ {
+  figure img {
+    width: 70vw;
+  }
+
+  .audioplayer {
+    width: 90vw;
+  }
+
+  audio {
+    width: 60vw;
+  }
+  
+  .title {
+    font-size: 2rem;
+  }
+
+  .playlist {
+    width: 90vw;
+    display: none;
+  }
+
+  #menu {
+    display: block;
+  }
+  #menu_button {
+    font-size: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 1024px) and (min-width: 601px) /* tablet */ {
+  figure img {
+    width: 70vw;
+  }
+
+  .audioplayer {
+    width: 90vw;
+  }
+
+  audio {
+    width: 60vw;
+  }
+
+  .title {
+    font-size: 3rem;
+  }
+
+  .playlist {
+    width: 90vw;
+    display: none;
+  }
+
+  #menu {
+    display: block;
+  }
+  #menu_button {
+    font-size: 3rem;
+  }
+}

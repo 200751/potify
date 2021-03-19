@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="icon" href="assets/img/knockoff_spotify.svg">
+    <title>Potify</title>
+</head>
+<body>
+    <main>
+        <section class="playlist" id="playlist">
+            <div id="info">
+                <ul class="playlist_ul">
+                    <li>Title</li>
+                    <li>Artist</li>
+                    <li>Album</li>
+                </ul>
+            </div>
+            <div class="songs">
+                <table id="song_playlist">
+                    <tr class="song">
+                        <td class="song_title">Astronaut In The Ocean</td>
+                        <td>Masked Wolf</td>
+                        <td>Astronaut In The Ocean</td>
+                    </tr>
+                    <tr class="song">
+                        <td class="song_title">Goosebumps</td>
+                        <td>HVME</td>
+                        <td>Goosebumps</td>
+                    </tr>
+                    <tr class="song">
+                        <td class="song_title">Never Gonna Give You Up</td>
+                        <td>Rick Astley</td>
+                        <td>Whenever You Need Somebody</td>
+                    </tr>
+                    <tr class="song">
+                        <td class="song_title">Don't Worry</td>
+                        <td>Madcon, Ray Dalton</td>
+                        <td>Don't Worry</td>
+                    </tr>
+                    <tr class="song">
+                        <td class="song_title">Blinding Lights</td>
+                        <td>The Weeknd</td>
+                        <td>After Hours</td>
+                    </tr>
+                    <tr class="song">
+                        <td class="song_title">I'm Still Standing</td>
+                        <td>Elton John</td>
+                        <td>Too Low For Zero</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+        <section class="audioplayer" id="audioplayer">
+            <div id="title">
+            </div>
+            <figure>
+                <img id="album_cover" src="assets/img/default.svg" alt="album cover">
+            </figure>
+            <audio id="audio" src="assets/audio/" controls autoplay></audio>
+            <!-- <div class="controls">
+                <button class="previous">
+                    <i class="fas fa-step-backward fa-3x"></i>
+                </button>
+                <button class="play">
+                    <i class="far fa-play-circle fa-3x"></i>
+                    <i class="far fa-pause-circle fa-3x"></i>
+                </button>
+                <button class="next">
+                    <i class="fas fa-step-forward fa-3x"></i>
+                </button>
+            </div> -->
+        </section>
+        <section>
+            <div id="menu">
+                <button onclick="menu()" id="menu_button"><i class="fas fa-bars"></i></button>
+            </div>
+        </section>
+    </main>
+    <script src="https://kit.fontawesome.com/ed8e956d8b.js" crossorigin="anonymous"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
