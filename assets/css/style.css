@@ -1,5 +1,6 @@
 * {
   outline: none;
+  box-sizing: border-box;
 }
 
 body {
@@ -60,10 +61,16 @@ main {
 table {
   width: 100%;
 }
+
 tr{
   display: flex;
   border-bottom: solid 1px lightgray;
 }
+
+.white {
+  color: white;
+}
+
 td {
   flex: 33%;
   line-height: 3vh;
@@ -96,6 +103,19 @@ figure img {
   -webkit-user-select: none;
   -ms-user-select: none;
   border-radius: 5%;
+}
+#progress {
+  display: flex;
+  justify-self: center;
+  align-self: center;
+  width: 90%;
+}
+
+#volume {
+  display: flex;
+  justify-self: center;
+  align-self: center;
+  width: 30%;
 }
 
 .animation {
@@ -214,5 +234,10 @@ tr.active {
   }
   #menu_button {
     font-size: 3rem;
+  }
+}
+@media only screen and (max-height: 768px){
+  figure img {
+    width: 45vw;
   }
 }
