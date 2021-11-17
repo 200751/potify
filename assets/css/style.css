@@ -104,11 +104,21 @@ figure img {
   -ms-user-select: none;
   border-radius: 5%;
 }
-#progress {
+.progress_container {
+  margin-top: 10px;
   display: flex;
   justify-self: center;
   align-self: center;
-  width: 90%;
+  width: 80%;
+  background-color: white;
+  border-radius: 50px;
+  height: 8px;
+}
+.progress {
+  height: 8px;
+  background: #2a4b9b;
+  transition: width .1s linear;
+  mix-blend-mode: multiply;
 }
 
 #volume {
@@ -116,6 +126,7 @@ figure img {
   justify-self: center;
   align-self: center;
   width: 30%;
+  margin-top: 10px;
 }
 
 .animation {
@@ -143,7 +154,9 @@ audio {
 }
 
 .controls {
-  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
 }
 
 button {

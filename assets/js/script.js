@@ -16,7 +16,44 @@ repeat.addEventListener("click", function(){
   }
 });
 
-audio.addEventListener('playing', function(){
+var timer;
+var percent = 0;
+var audio = document.getElementById("audio");
+audio.addEventListener("playing", function(_event) {
+  var duration = _event.target.duration;
+  advance(duration, audio);
+});
+audio.addEventListener("pause", function(_event) {
+  clearTimeout(timer);
+});
+var advance = function(duration, element) {
+  var progress = document.getElementById("progress");
+  increment = 10/duration
+  percent = Math.min(increment * element.currentTime * 10, 100);
+  progress.style.width = percent+'%'
+  startTimer(duration, element);
+}
+var startTimer = function(duration, element){ 
+  if(percent < 100) {
+    timer = setTimeout(function (){advance(duration, element)}, 100);
+  }
+}
+
+function togglePlay (e) {
+  e = e || window.event;
+  var btn = e.target;
+  if (!audio.paused) {
+    btn.classList.remove('active');
+    audio.pause();
+    isPlaying = false;
+  } else {
+    btn.classList.add('active');
+    audio.play();
+    isPlaying = true;
+  }
+}
+
+audio.addEventListener('playing', function(e){
   album_cover.classList.add("animation");
 });
 
@@ -105,7 +142,12 @@ document.getElementById("song_playlist").addEventListener("click", function (ite
     if (audio.paused) {
       audio.play();
       playAudioElement.innerHTML = "<i class='far fa-pause-circle fa-3x'></i>";
-      album_cover.classList.add("animation");
+      if (audio.src == ""){
+        
+        album_cover.classList.add("animation");
+      } else {
+        album_cover.classList.remove("animation");
+      }
     }
     else {
       audio.pause(); 
@@ -118,8 +160,8 @@ document.getElementById("song_playlist").addEventListener("click", function (ite
   }
 
   // function nextSong(){
-  //   // console.log("Done");
-  //   // audio.setAttribute("src", "assets/audio/don'tworry.mp3");
+  //   console.log("Done");
+  //   audio.setAttribute("src", "assets/audio/don'tworry.mp3");
   //   album_cover.classList.remove("animation");
   // }
 
